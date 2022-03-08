@@ -246,7 +246,7 @@ console.log(remaining);
 //* falsy values: false, 0, '', undefined, null, NaN
 
 //* truthy values: true, any number(positive & negative), any string including single white space, [], {}, anything else that is not falsy will be truthy
-
+/* 
 // check truthy
 let myVar = 5;
 // check any truthy
@@ -305,3 +305,33 @@ isActive || hideUser();
 // toggle boolean
 isActive = !isActive;
 console.log(isActive);
+ */
+
+//* -----42-7 Explore Localstorage and session storage with JSON-----
+
+/* const addToLocalStorage = () => {
+  const idInput = document.getElementById('storage-id');
+  const id = idInput.value;
+
+  const valueInput = document.getElementById('storage-value');
+  const value = valueInput.value;
+
+  // add to local storage
+  if (id && value) {
+    localStorage.setItem(id, value);
+  }
+  idInput.value = '';
+  valueInput.value = '';
+};
+
+// with JSON
+localStorage.setItem('friend1', [45, 78, 98]);
+localStorage.setItem('friend2', JSON.stringify([45, 78, 98]));
+
+const pen = { price: 10, color: 'black' };
+localStorage.setItem('pen1', pen);
+localStorage.setItem('pen2', JSON.stringify(pen));
+
+const storedPen = localStorage.getItem('pen2');
+const penObj = JSON.parse(storedPen);
+console.log(penObj); */

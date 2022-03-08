@@ -125,7 +125,7 @@ console.log(special); */
 
 //* -----42-4 Array and object Destructuring, optional chaining-----
 
-// 1. array destructuring
+/* // 1. array destructuring
 const numbers = [42, 65];
 // const x = numbers[0];
 // const y = numbers[1];
@@ -177,4 +177,66 @@ const employee = {
 const { machine, ide } = employee;
 const { weight, address } = employee.specification;
 const { brand } = employee?.specification?.watch;
-console.log(brand);
+console.log(brand); */
+
+//* -----42-5 JSON, Fetch, keys, values, array add or remove using dots-----
+
+/* // 1. JSON => stringify, parse
+const student = {
+  name: 'Salib Khan',
+  age: 32,
+  movies: ['king khan', 'Dhakar Mastan'],
+};
+
+const studentJSON = JSON.stringify(student);
+console.log(student);
+console.log(studentJSON);
+
+const studentObj = JSON.parse(studentJSON);
+console.log(studentObj);
+
+// 2. fetch
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+// 3. Objects keys, values, entries
+
+const objKeys = Object.keys(student);
+console.log(objKeys);
+
+const objValues = Object.values(student);
+console.log(objValues);
+
+const objKeysValuesPair = Object.entries(student);
+console.log(objKeysValuesPair);
+
+// forEach
+const numbers = [23, 54, 67, 87, 23, 78];
+numbers.forEach((number) => console.log(number));
+numbers.map((number) => number * 2);
+
+//* Use: for of => array, array like object, arguments, querySelector,         querySelectorAll etc.
+
+//* Use: for in => Object
+
+// add or remove from an array
+const products = [
+  { name: 'laptop', price: 3200, brand: 'len', color: 'silver' },
+  { name: 'phone', price: 7000, brand: 'HTC', color: 'golden' },
+  { name: 'watch', price: 3000, brand: 'casio', color: 'yellow' },
+  { name: 'sungalss', price: 300, brand: 'ray', color: 'black' },
+  { name: 'camera', price: 9000, brand: 'canon', color: 'gray' },
+];
+
+const newProduct = { name: 'webcam', price: 700, color: 'red' };
+
+//* copy products Array and then add newProduct Object
+const newProducts = [...products, newProduct];
+console.log(newProducts);
+
+//* create a new array without one specific item
+// remove phone means create a new array without the phone
+const remaining = products.filter((product) => product.name !== 'phone');
+console.log(remaining);
+ */

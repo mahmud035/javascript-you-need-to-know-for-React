@@ -240,3 +240,68 @@ console.log(newProducts);
 const remaining = products.filter((product) => product.name !== 'phone');
 console.log(remaining);
  */
+
+//* -----42-6 (advanced) truthy, false Ternary operator, shortcut and or-----
+
+//* falsy values: false, 0, '', undefined, null, NaN
+
+//* truthy values: true, any number(positive & negative), any string including single white space, [], {}, anything else that is not falsy will be truthy
+
+// check truthy
+let myVar = 5;
+// check any truthy
+if (myVar) {
+  myVar = myVar * 100;
+  console.log(myVar);
+} else {
+  myVar = 0;
+  console.log(myVar);
+}
+
+let myMoney = 50;
+// this way you can check negative or falsy anything
+if (!myMoney) {
+}
+
+const money = 800;
+// let food;
+// if (money > 100) {
+//   food = 'birayani';
+// } else {
+//   food = 'cha biscuit';
+// }
+
+//* ternary operator
+let food1 = money > 100 ? 'birayani' : 'cha biscuit';
+console.log(food1);
+
+let drink = money > 100 && myVar > 100 ? 'coke' : 'water';
+console.log(drink);
+
+// number to string conversion
+const num1 = 52;
+console.log(num1);
+
+const numStr = num1 + '';
+console.log(numStr);
+
+// string to number conversion
+const input = '560';
+const inputNum = +input;
+console.log(inputNum);
+
+//
+let isActive = true;
+const showUser = () => console.log('display User');
+const hideUser = () => console.log('Hide User');
+// isActive ? showUser() : hideUser();
+
+// use && if the left side is true then the right side will be executed
+isActive && showUser();
+
+// use || if the left side is false then right side will be executed
+isActive || hideUser();
+
+// toggle boolean
+isActive = !isActive;
+console.log(isActive);

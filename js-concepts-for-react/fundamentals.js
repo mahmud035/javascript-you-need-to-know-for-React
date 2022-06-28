@@ -21,7 +21,7 @@ numbers[0] = 56;
 // 4. for loop
 for (let i = 0; i < numbers.length; i++) {
   const number = numbers[i];
-  confirm.log(number);
+  console.log(number);
 }
 
 // 5. function

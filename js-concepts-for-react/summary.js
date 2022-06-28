@@ -24,7 +24,7 @@ ES6
 7. Optional chaining (?.)
 --------------------------
 Browser API
-1. local storage session stoage
+1. local storage, session storage
 2. location API
 3. History API
 4. fetch
@@ -33,7 +33,7 @@ Others
 1. array: map, forEach, filter, find
 2. ternary operator 
 3. logical and logical or && ||
-4. JOSN (stringify, parse)
+4. JSON (stringify, parse)
 5. +, 
 
 */
@@ -41,19 +41,19 @@ Others
 const x = 50;
 const y = 100;
 const obj = {
-    x: x,
-    y: y
+  x: x,
+  y: y,
 };
 
 // shortchut
-const obj1 = { x, y }
+const obj1 = { x, y };
 
 const name = 'Solimullah';
 const area = 'Dhaka';
 
 const nobab = {
-    name: name,
-    area: area
-}
+  name: name,
+  area: area,
+};
 
 const nobab2 = { name, area };
